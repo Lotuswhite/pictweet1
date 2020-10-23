@@ -793,13 +793,18 @@ header.header .user_nav span {
   font-size: 2em;
   cursor: pointer;
   position: relative;
-  left: 400px;
+  left: 300px;
 }
 
 header.header .user_nav span:after {
   content: '▼';
+  display: block;
+  float: left;
   font-size: .5em;
   margin-left: -8px;
+  position: relative;
+  top: 20px;
+  left: 160px;
 }
 
 header.header .user_nav span:hover ul {

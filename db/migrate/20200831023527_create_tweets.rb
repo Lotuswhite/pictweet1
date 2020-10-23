@@ -3,7 +3,8 @@ class CreateTweets < ActiveRecord::Migration[6.0]
     create_table :tweets do |t|
       t.string :name
       t.string :text
-      t.text :image
+      t.datetime :day
+
       t.timestamps
     end
   end

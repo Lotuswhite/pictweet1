@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_10_15_110516) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "text"
-    t.text "image"
+    t.datetime "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
