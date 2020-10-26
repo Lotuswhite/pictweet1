@@ -656,7 +656,7 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+  color:#000000;
   margin: 0;font-family
 }
 
@@ -708,8 +708,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #000000;
+  color: #000000;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -717,6 +717,19 @@ header.header div.header__bar.row div.grid-6 a.post {
   position: relative;
   left: 400px;
 }
+.btn{
+  padding: 8px 20px;
+  font-size: 16px;
+  border: 2px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  left: 1px;
+}
+
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
@@ -951,9 +964,9 @@ div.contents.row div.content_post p {
   position: absolute;
   left: 30px;
   right: 100px;
-  bottom: 30px;
+  bottom: 200px;
   margin: 0;
-  font-size: 20px;
+  font-size: 35px;
   z-index: 2;
   font-weight: bold;
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
@@ -978,13 +991,15 @@ div.contents.row div.content_post span.name a:hover {
 }
 
 div.contents.row div.content_post span.name span {
-  font-size: 9px;
+  font-size: 14px;
   display: block;
 }
 
 div.contents.row .success {
   margin: 20px 0;
   padding: 30px;
+  position: relative;
+  top: 150px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
   box-sizing: border-box;
@@ -1006,9 +1021,9 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
+  background-color: #fff;
   border-radius: 20px;
-  color: #fff;
+  color: #000000;
   border: 0;
   font-size: 18px;
 }
@@ -1031,7 +1046,7 @@ form input[type="submit"]:hover {
   text-align: center;
   font-weight: normal;
   font-size: 20px;
-  color: #666;
+  color: #000000;
 }
 
 .comments {
