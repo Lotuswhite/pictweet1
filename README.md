@@ -1,24 +1,68 @@
-# README
+# アプリケーション名
+Every
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+このアプリケーションでできることは、ユーザーのその日の体調を投稿していただき、
+ユーザー全員で各ユーザーの体調を共有し、周知できるようにしています。
 
-Things you may want to cover:
+# 利用方法 
+ユーザー管理機能を入れているので登録を行なって利用して頂きます。
+ユーザーのその日の体調を体調入力フォームから入力して頂き、投稿行なって頂きます。
+投稿して頂くことにより投稿して頂いた投稿内容がトップページに表示され、
+利用して頂いている各ユーザーに情報を共有することができ、周知できます。
 
-* Ruby version
+# 目指した課題解決
+このアプリケーションを作成しようと思ったのは、前職での課題を解決したかったからです。
+前職で社員のその日の体調は紙に記載して管理していました。（二箇所記載する所がありました。）
 
-* System dependencies
+[課題]
+1.年々書類が増えて、管理が大変でした。
+2.書類を探すのに時間が膨大にかかっていた。
+3.紙での管理だったので、誰が休みで体調を崩しているのかが周知徹底されていませんでした。
+4.周知徹底されていなかったことにより、誰が休みかがわからなかったので休んだ人がいなくて行いたい作業の直前でそれを知り、作業が滞っていた時がありました。
 
-* Configuration
+[解決]
+1.その日の体調が悪い人、休みの人を一目で確認できるようになった。
+2.全員で情報共有できるようになった。
+3.会社に出社する前に確認できるようになり、作業の滞りを回避できるようになる。
+4.書類での管理が必要なくなり、管理が楽になる。
+5.書類を探す手間を省くことができるようになる。
 
-* Database creation
+# テーブル設計
 
-* Database initialization
+## users テーブル
 
-* How to run the test suite
+| column     	| type   	| options    	|
+|------------	|--------	|------------	|
+| first_name  | string 	| null:false 	|
+| family_name | string 	| null:false 	|
+| email      	| string 	| null:false 	|
+| password   	| string 	| null:false 	|
+| sex        	| string 	| null:false 	|
+| blood      	| string 	| null:false 	|
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+  
+-has_many:conditions
 
-* Deployment instructions
+## conditions テーブル
 
-* ...
+| column   	| type       	| options                       	|
+|----------	|------------	|-------------------------------	|
+| info     	| integer    	| null:false                    	|
+| text      | text       	| null:false                    	|
+| day      	| date       	| null:false                    	|
+| user     	| references 	| null:false, foreign_key: true 	|
+
+### Association
+
+-belongs_to:user
+
+
+
+# 実装予定の機能
+誰かが確認した場合に、確認したよというボタンなどの機能
+カレンダーを表示させ誰がどの日に休むか入力できるページ
+
+
+

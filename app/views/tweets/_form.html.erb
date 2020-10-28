@@ -1,3 +1,4 @@
-<%= form.text_field :image, placeholder: "Image Url" %>
+<%= form.datetime_field :day, placeholder: "day" %>
+<%= form.collection_select(:info_id, Info.all, :id, :name, {}, {class:"select-box", id:"tweet-info"}) %>
 <%= form.text_area :text, placeholder: "text", rows: "10" %>
 <%= form.submit "SEND" %>
